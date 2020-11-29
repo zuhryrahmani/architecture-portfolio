@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0 auto;
+   font-family: Roboto; sans-serif;
+}
+
+.sliderImage {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.contentImageHorizontal {
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.contentImageVertical {
+   width: 50%;
+   margin-right: 10px;
+   float: left;
+}
+
+.contentImageCollege {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   object-position: center;
+   margin-bottom: 10px;
+}
+
+.profileImage {
+   width: 100%;
+}
+
+.logo {
+   width: 45px;
+   height: 45px;
+   font: 30px "Bebas Neue";
+   color: #ffd700;
+   text-shadow: 0 0 7px #111111;
+   padding: 3px 15px 3px 17px;
+   border-right: 1px solid #ad9200;
+   position: fixed;
+   z-index: 4;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+   cursor: pointer;
+}
+
+#dropDownContainer {
+   height: 45px;
+   width: 80%;
+   float: left;
+}
+
+.buttonFreelance, .buttonCompetition {
+   background-color: transparent;
+   border: none;
+   outline: none;
+   text-decoration: none;
+   font: 300 16px Roboto;
+   color: #545454;
+   height: 45px;
+   position: fixed;
+   z-index: 4;
+}
+
+.buttonFreelance {
+   left: 60px;
+}
+
+.buttonCompetition {
+   left: 230px;
+}
+
+.buttonCollege {
+   position: fixed;
+   z-index: 4;
+   left: 420px;
+}
+
+button:hover, .col:hover, button:focus, .col:focus {
+   cursor: pointer;
+   font-weight: 500;
+}
+
+.drop {
+   width: 200px;
+   float: left;
+}
+
+.col {
+   height: 45px;
+   padding: 13px 13px 13px 5px;
+   font-weight: 300;
+}
+
+.col a:visited {
+   color: #545454;
+}
+
+.dropFreelance {
+   margin-left: 20px;
+   width: 180px;
+}
+
+.dropContent {
+   display: none;
+   position: absolute;
+   background-color: #f0f0f0;
+   width: 180px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropContent a {
+   color: #545454;
+   font-weight: 300;
+   font-size: 13px;
+   display: block;
+   padding: 10px;
+}
+
+.dropContent a:hover, .dropContent a:focus {
+   background-color: d3d3d3;
+}
+
+#dropDownFreelance {
+   position: fixed;
+   z-index: 3;
+   top: 45px;
+   left: 45px;
+}
+
+#dropDownCompetition {
+   position: fixed;
+   z-index: 3;
+   top: 45px;
+   left: 225px;
+}
+
+.show {
+   display: block;
+   position: absolute;
+   background-color: #f0f0f0;
+   width: 180px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+nav {
+   width: 100%;
+   height: 45px;
+   padding: 0;
+   position: fixed;
+   top: 0;
+   z-index: 5;
+}
+
+.box {
+   background-color: #ffd700;
+   width: 100%;
+   height: 45px;
+   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+   position: fixed;
+   top: 0;
+   z-index: 3;
+}
+
+.hamburger {
+   width: 30px;
+   height: 4px;
+   background-color: #ffd700;
+   margin: 5px 0;
+   border-radius: 2px;
+   box-shadow: 0 0 7px #111111;
+}
+
+#hamburgerContainer:hover, #hamburgerContainer:focus {
+   cursor: pointer;
+}
+
+#hamburgerButton {
+   background-color: #ffd700;
+   border: none;
+   outline: none;
+   position: fixed;
+   top: 4px;
+   right: 4px;
+   z-index: 4;
+   display: none;
+}
+
+.mobileButton {
+   border: none;
+   outline: none;
+   width: 100%;
+   text-align: center;
+   font: 300 16px Roboto;
+   color: #545454;
+   padding: 10px 0;
+   background-color: transparent;
+}
+
+.mobileButton:active, .mobileButton:hover {
+   font-weight: 500;
+}
+
+.mobileLinks {
+   text-decoration: none;
+   color: #545454;
+}
+
+.mobileLinks:visited {
+   color: #545454;
+}
+
+.mobileList {
+   display: none;
+   width: 100%;
+   text-align: center;
+   background-color: #ffe971;
+   font: 300 16px Roboto;
+   padding: 10px 0;
+   line-height: 1.5;
+}
+
+.mobileList p:active {
+   font-weight: 500;
+}
+
+#mobileContainer {
+   display: none;
+   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+   position: fixed;
+   top: 45px;
+   width: 100%;
+   opacity: 0.97;
+   background-color: #ffd700;
+   z-index: 2;
+}
+
+.showMobileFreelance {
+   display: block;
+   width: 100%;
+   text-align: center;
+   background-color: #ffe971;
+   font: 300 16px Roboto;
+   padding: 10px 0;
+   line-height: 1.5;
+}
+
+.showMobileCompetition {
+   display: block;
+   width: 100%;
+   text-align: center;
+   background-color: #ffe971;
+   font: 300 16px Roboto;
+   padding: 10px 0;
+   line-height: 1.5;
+}
+
+.sliderTitle {
+   text-align: center;
+   position: absolute;
+   z-index: 1;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 20px 25px 25px 25px;
+   border: 2px solid #ffd700;
+   box-shadow: 0px 0px 5px #111111;
+}
+
+.sliderTitle h1 {
+   font: 60px "Bebas Neue";
+   color: #ffd700;
+   text-shadow: 2px 2px 7px #111111;
+}
+
+.sliderTitle p {
+   font-size: 18px;
+   color: #ffd700;
+   text-shadow: 2px 2px 7px #111111;
+   border-top: 2px solid #ffd700;
+   width: 75%;
+   padding-top: 5px;
+}
+
+footer {
+   display: flex;
+   background-color: d5d5d5;
+   color: #808080;
+   font-size: 14px;
+}
+
+.footerLeft {
+   flex-basis: 50%;
+   padding: 15px 50px;
+}
+
+.footerRight {
+   flex-basis: 50%;
+   padding: 15px;
+}
+
+.footerRight p {
+   padding-right: 10px;
+   position: absolute;
+   right: 135px;
+}
+
+footer p {
+   line-height: 2;
+}
+
+.icon {
+   height: 20px;
+   margin-right: 5px;
+}
+
+.icons {
+   padding-top: 3px;
+   text-align: right;
+}
+
+main {
+   display: flex;
+}
+
+#content {
+   display: flex;
+   flex-direction: column;
+   flex-basis: 75%;
+   background-color: #f0f0f0;
+   padding: 25px 25px 25px 0;
+}
+
+aside {
+   flex-basis: 25%;
+   background-color: #ffd700;
+   box-shadow: -7px 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#freelanceProjects, #competitionProjects, #collegeProjects {
+   width: 100%;
+}
+
+#competitionProjects, #collegeProjects {
+   margin-top: 20px;
+}
+
+.articleContainer {
+   flex-direction: column;
+   margin-left: 50px;
+   background-color: white;
+   border: 1px solid white;
+}
+
+.collegeContainer {
+   margin-left: 50px;
+   background-color: white;
+   padding: 10px;
+}
+
+.collegeRow {
+   width: 100%;
+   display: flex;
+}
+
+.collegeArticle {
+   width: 300px;
+   height: 260px;
+   margin: 10px auto;
+   padding: 10px;
+   border: 1px solid #f0f0f0;
+   border-radius: 10px;
+}
+
+.collegeArticle:hover {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   margin-top: 6px;
+}
+
+article {
+   margin: 20px 20px 0 20px;
+   border: 1px solid #f0f0f0;
+   border-radius: 10px;
+   padding: 20px;
+   overflow: auto;
+}
+
+.titleProjects {
+   background-color: #ffd700;
+   padding: 10px 0 10px 50px;
+   font-weight: 100;
+   letter-spacing: 1.1em;
+   text-align: center;
+}
+
+.articleBottom {
+   margin: 20px;
+}
+
+article h3 {
+   color: #333333;
+   font-weight: 300;
+   font-size: 25px;
+   text-align: center;
+   border-bottom: 1px solid #f0f0f0;
+   padding-bottom: 15px;
+}
+
+.articleInside {
+   padding-top: 20px;
+}
+
+article p {
+   font-weight: 300;
+}
+
+figcaption {
+   color: #333333;
+   font-weight: 300;
+   font-size: 18px;
+   text-align: center;
+   padding-top: 5px;
+   border-top: 1px solid #f0f0f0;
+}
+
+aside header table {
+   width: 100%;
+   height: 250px;
+   background-color: #f0f0f0;
+   text-align: left;
+   font-size: 0.9em;
+   padding: 15px;
+}
+
+th {
+   width: 35%;
+   font-weight: 400;
+}
+
+td {
+   font-weight: 300;
+}
+
+.profileDrop {
+   text-align: center;
+   padding: 10px;
+   width: 100%;
+   border: none;
+   outline: none;
+   background-color: #ffd700;
+   font-size: 16px;
+}
+
+.arrow {
+   font-size: 8px;
+}
+
+.profileDrop h4 {
+   font-weight: 400;
+   color: #363636;
+}
+
+.profileDrop h4:hover, .profileDrop h4:focus {
+   cursor: pointer;
+}
+
+.dropBackground {
+   display: block;
+   background-color: #ffe971;
+   width: 100%;
+   height: 0;
+   padding: 0 40px 0 40px;
+   overflow: hidden;
+   transition: height 1s;
+}
+
+section li {
+   line-height: 2.2;
+}
+
+.listProfile {
+   font-weight: 300;
+   font-size: 0.9em;
+   line-height: 1.2;
+}
+
+.subListProfile {
+   font-weight: 400;
+   font-size: 0.8em;
+   line-height: 1.2;
+}
+
+.skillsList {
+   font-weight: 300;
+   font-size: 0.9em;
+   line-height: 1.2;
+}
+
+.skillsLeft {
+   flex-basis: 50%;
+}
+
+.skillsRight {
+   flex-basis: 50%;
+}
+
+.skillsFlex {
+   display: flex;
+   width: 100%;
+   margin: 10px 0 10px 0;
+}
+
+#dropDownSkills {
+   padding: 0;
+}
+
+.showProfileEducations {
+   display: block;
+   background-color: #ffe971;
+   width: 100%;
+   height: 100px;
+   padding: 0 40px;
+}
+
+.showProfileOrganizations {
+   display: block;
+   background-color: #ffe971;
+   width: 100%;
+   height: 180px;
+   padding: 0 40px;
+}
+
+.showProfileAwards {
+   display: block;
+   background-color: #ffe971;
+   width: 100%;
+   height: 95px;
+   padding: 0 40px;
+}
+
+.showProfileSkills {
+   display: block;
+   background-color: #ffe971;
+   width: 100%;
+   height: 90px;
+   padding: 0 40px;
+}
+
+.showProfileCertifications {
+   display: block;
+   background-color: #ffe971;
+   width: 100%;
+   height: 240px;
+   padding: 0 40px;
+}
+
+#titleProfile {
+   text-align: center;
+   font-weight: 100;
+   letter-spacing: 0.5em;
+   position: absolute;
+   color: black;
+   right: 0;
+   padding: 0 5px 0 35px;
+   background-color: #ffd700;
+}
+
+@media screen and (max-width: 1300px) {
+   .collegeRow {
+      flex-direction: column;
+   }
+   .collegeContainer {
+      display: flex;
+   }
+   .collegeArticle {
+      flex-basis: 33.33%;
+   }
+   .collegeArticle:hover {
+      margin-top: 10px;
+   }
+}
+
+@media screen and (max-width: 1000px) {
+   .collegeRow {
+      display: block;
+   }
+   .collegeContainer {
+      display: block;
+   }
+   .collegeArticle:hover {
+      margin-top: 10px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   main {
+      display: block;
+   }
+   #content {
+      padding: 0;
+   }
+   .collegeRow {
+      display: flex;
+   }
+   .collegeContainer {
+      display: flex;
+   }
+   .collegeArticle:hover {
+      margin-top: 10px;
+   }
+}
+
+@media screen and (max-width: 680px) {
+   .collegeRow {
+      display: block;
+   }
+   .collegeContainer {
+      display: block;
+   }
+   .collegeArticle:hover {
+      margin-top: 10px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   #hamburgerButton {
+      display: block;
+   }
+
+   #dropDownContainer {
+      display: none;
+   }
+   .collegeContainer {
+      margin-left: 0;
+   }
+   .articleContainer {
+      margin-left: 0;
+   }
+   .titleProjects {
+      letter-spacing: 0.5em;
+      padding: 10px;
+   }
+   .footerRight p {
+      text-align: right;
+      padding-right: 10px;
+      position: static;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .contentImageVertical {
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .contentImageVertical {
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .sliderTitle h1 {
+      font: 40px "Bebas Neue";
+   }
+}
